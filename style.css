@@ -40,16 +40,17 @@ header{
 
 /* logo badge */
 .brand-badge{
-  width:clamp(70px,10vw,95px);  /* lebih lebar */
+  /* lebar otomatis: di HP kecil sekitar 80–90px, di desktop 120–140px */
+  width:clamp(70px,10vw,95px);
   aspect-ratio:1/1;
   background:#ffffff;            /* kotak putih polos */
   display:grid;
   place-items:center;
   position:relative;
   overflow:hidden;
-  border-radius:12px;            /* sudut lebih halus */
+  border-radius:12px;            /* sudut halus */
   box-shadow:0 4px 12px rgba(0,0,0,0.08); /* bayangan lembut */
-  padding:10px;                  /* beri ruang dalam supaya logo tidak nempel */
+  padding:10px;                  /* ruang dalam */
 }
 .brand-badge::before{
   content:none; /* matikan efek gradasi */
@@ -134,4 +135,5 @@ footer{
   .header-inner{ grid-template-columns: 1fr; text-align:center; gap:12px; }
   .brand-copy{ align-items:center; }
 }
+
 
