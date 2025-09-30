@@ -40,27 +40,24 @@ header{
 
 /* logo badge */
 .brand-badge{
-  width:clamp(70px,10vw,95px);
+  width:clamp(70px,10vw,95px);  
   aspect-ratio:1/1;
-  border-radius:12px;
-  background: #ffffff;
-  backdrop-filter: blur(6px);
+  background:#ffffff;           
   display:grid;
   place-items:center;
   position:relative;
   overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08); /* bayangan lembut */
-  padding:10px;                  /* ruang dalam agar logo tidak mepet */
-  
+  border-radius:12px;            
+  box-shadow:0 4px 12px rgba(0,0,0,0.08); 
+  padding:10px;                  
 }
 
 .brand-badge img{
-  width:80%;
-  height:auto;
+  width:100%;
+  height:100%;
   object-fit:contain;
   z-index:1;
 }
-
 
 /* header teks */
 .brand-copy{ display:flex; flex-direction:column; gap:6px; }
@@ -132,10 +129,16 @@ footer{
 
 /* responsif header di layar kecil */
 @media (max-width:720px){
-  .header-inner{ grid-template-columns: 1fr; text-align:center; gap:12px; }
-  .brand-copy{ align-items:center; }
+  .header-inner{
+    grid-template-columns: 1fr; /* ubah jadi satu kolom */
+    text-align:center;
+    gap:12px;
+    justify-items:center; /* logo & teks di tengah */
+  }
+  .brand-badge{
+    margin-bottom:8px; /* beri jarak kecil antara logo dan teks */
+  }
+  .brand-copy{
+    align-items:center; /* teks di tengah */
+  }
 }
-
-
-
-
